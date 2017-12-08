@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker-compose build
+docker-compose run open_auction rake db:drop db:create db:migrate db:seed
