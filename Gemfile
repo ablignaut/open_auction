@@ -30,8 +30,28 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+# Forms made easy!
+gem 'simple_form', '~> 3.5'
+
+# Easy pagination
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
+# ActiveRecord
+gem 'enumerate_it', '~> 1.6', '>= 1.6.1'
+gem 'has_scope', '~> 0.7.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Security
+gem 'devise', '~> 4.3'
+gem 'cancancan', '~> 2.1', '>= 2.1.2'
+
+# Ruby server library for the Pusher API
+gem 'pusher', '~> 1.3', '>= 1.3.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -39,9 +59,33 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  # Adds support for Rspec system testing
+  gem 'rspec-rails', '~> 3.6', '>= 3.6.1'
+
+  # Database Cleaner is a set of strategies for cleaning your database in Ruby
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners that
+  # test common Rails functionality
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
+
+  # including factory inheritance
+  gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
+
+  # Faker library that generates fake data
+  gem 'faker', '~> 1.8', '>= 1.8.4'
+
+  # Guard::RSpec allows to automatically & intelligently launch specs when files
+  # are modified
+  gem 'guard', '~> 2.14', '>= 2.14.1'
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
 end
 
 group :development do
+  # Debugger
+  gem 'better_errors', '~> 2.3'
+
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
