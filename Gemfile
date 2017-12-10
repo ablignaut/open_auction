@@ -45,6 +45,9 @@ gem 'has_scope', '~> 0.7.1'
 ## Easy file attachment management for ActiveRecord
 gem 'paperclip', '~> 5.1'
 
+# Attributes on Steroids for Plain Old Ruby Objects
+gem 'virtus', '~> 1.0', '>= 1.0.5'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
