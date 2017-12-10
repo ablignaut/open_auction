@@ -13,5 +13,6 @@ class User < ApplicationRecord
               message: I18n.t('errors.messages.wrong_format_password')
             }, allow_blank: true
   validates :name,
-            length: { maximum: 60 }
+            length: { maximum: 60 },
+            allow_blank: true
 end
