@@ -2,7 +2,7 @@ FROM ruby:2.4.2-slim-jessie
 
 # Used aptitude
 RUN apt-get update \
-  && apt-get install -y aptitude nodejs openssl libpq-dev build-essential python-software-properties
+  && apt-get install -y aptitude nodejs openssl libpq-dev build-essential imagemagick python-software-properties
 
 # make the "pt_BR.UTF-8" locale so postgres will be utf-8 enabled by default
 RUN aptitude update \
