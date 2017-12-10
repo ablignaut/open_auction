@@ -1,0 +1,35 @@
+<div id="em-mheader" class="visible-xs container">
+	<div id="em-mheader-top" class="row">
+		<div id="em-mheader-logo" class="col-xs-4">
+			<div class="em-logo"><%#= link_to image_tag("logo_small/#{COMPANY_PERMALINK}.png"), root_path, class: 'logo' -%></div>
+		</div>
+		<div class="col-xs-20 em-mheader-menu-top">
+			<% if current_user.present? %>
+			<div class="em-top-icons em-top-icon-account">
+				<%#= link_to raw("<i class='fa fa-user'></i>"), account_root_path, class: 'em-menu-icon' -%>
+			</div>
+			<div class="em-top-icons em-top-icon-signout">
+				<%#= link_to raw("<i class='fa fa-sign-out'></i>"), destroy_user_session_path, method: :delete, class: 'em-menu-icon' -%>
+			</div>
+			<div class="em-top-icons em-top-icon-my-user-bids">
+				<%#= current_user.username -%> | <strong class="left-bids"><%= pluralize(current_user.points, "ponto") -%></strong>
+			</div>
+			<% else %>
+			<div class="em-top-icons em-top-icon-signup">
+				<%#= link_to raw("<i class='fa fa-user-plus'></i>"), endpoint_authorization_path, class: 'em-menu-icon' -%>
+			</div>
+			<% end -%>
+			<div id="em-mheader-wrapper-menu"> <span class="visible-xs fa fa-bars" id="em-mheader-menu-icon"></span>
+				<div id="em-mheader-menu-content" style="display: none;">
+					<div class="row mobile-block">
+						<div class="col-sm-24">
+							<ul class="em-mobile-help">
+								<%= render partial: '/shared/menu', locals: { type: 0 } -%>
+							</ul>
+						</div>
+					</div><!-- /.mobile-block -->
+				</div><!-- /.em-mheader-menu-content -->
+			</div><!-- /#em-mheader-wrapper-menu -->
+		</div>
+	</div><!-- /#em-mheader-top -->
+</div><!-- /#em-mheader -->

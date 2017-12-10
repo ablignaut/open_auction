@@ -1,0 +1,13 @@
+<div class="flash-messages" id="flash-messages">
+  <% flash.each do |type, message| %>
+    <% if message.present? and message != true %>
+      <div class="alert <%= bootstrap_class_for(type) %> fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <i class="fa fa-<%= bootstrap_icon_for(type) %> fa-fw fa-lg"></i> <%= message.html_safe %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<% if flash.present? and flash.to_hash.values.first.present? %>
+<script>setTimeout("$('#flash-messages').fadeOut(1000)", <%= [flash.to_hash.values.first.length * 50, 3000].max %>);</script>
+<% end %>

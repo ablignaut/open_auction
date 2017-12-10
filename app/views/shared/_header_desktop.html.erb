@@ -1,0 +1,100 @@
+<div class="em-header-middle">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="em-logo"><%#= link_to image_tag("logo/#{COMPANY_PERMALINK}.png", class: 'retina-img'), root_path, class: 'logo' -%></div>
+			</div>
+			<div class="col-sm-6">
+				<div class="my-user-bids">
+				<% if current_user.present? %>
+				<div class="avatar"><%#= image_tag(avatar_url(current_user)) %></div>
+				<% end %>
+					<span class="clock"><%#= l Time.current, format: :clock -%></span>
+					<% if current_user.present? %>
+					<div><%= current_user.email -%> | <strong class="left-bids"><%= pluralize(current_user.points, "ponto") -%></strong></div>
+					<% end -%>
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="em-top-links">
+					<% if current_user.present? %>
+					<ul class="list-inline f-right">
+						<div class="list-inline f-right account-link-new">
+							<%#= link_to destroy_user_session_path, method: :delete, class: 'em-register-link' do %><i class="fa fa-sign-out"></i> Sair<%# end -%>
+						</div>
+						<div class="list-inline f-right account-link-new">
+							<%#= link_to account_root_path, class: 'em-register-link' do %><i class="fa fa-user"></i> Minha conta<%# end -%>
+						</div>
+					</ul>
+					<% else %>
+					<div class="list-inline f-right account-link-new">
+					<%#= link_to raw("<span><i class='fa fa-user-plus'></i> Entrar</span>"), endpoint_authorization_path, class: 'em-register-link' -%>
+					</div>
+					<% end -%>
+				</div><!-- /.em-top-links -->
+			</div>
+		</div>
+	</div>
+</div><!-- /.em-header-middle -->
+
+<div id="em-fixed-top"></div>
+
+<div class="em-header-bottom">
+	<div class="container em-menu-fix-pos">
+		<div class="row">
+			<div class="col-sm-24">
+				<div class="line-top text-center">
+					<div class="em-menu-hoz">
+						<div id="em-main-megamenu">
+							<div class="em-menu">
+								<div class="megamenu-wrapper wrapper-4_3366">
+									<div class="em_nav" id="toogle_menu_4_3366">
+										<ul class="hnav em_hoz_menu effect-menu">
+											<%= render partial: '/shared/menu', locals: { type: 1 } -%>
+										</ul><!-- /.hnav -->
+									</div>
+								</div>
+							</div>
+						</div><!-- /#em-main-megamenu -->
+					</div><!-- /.em-menu-hoz -->
+				</div><!-- /.line-top -->
+			</div>
+		</div>
+	</div>
+</div><!-- /.em-header-bottom -->
+
+<div class="em-header-bottom em-fixed-top" style="display:none;">
+	<div class="container em-menu-fix-pos">
+		<div class="row">
+			<div class="col-sm-24">
+				<div class="line-top text-center">
+					<div class="em-logo-sticky f-left"><%#= link_to image_tag("logo_small/#{COMPANY_PERMALINK}.png"), root_path, class: 'logo' -%></div>
+					<div class="em-menu-hoz">
+						<div id="em-main-megamenu">
+							<div class="em-menu">
+								<div class="megamenu-wrapper wrapper-4_3366">
+									<div class="em_nav" id="toogle_menu_4_3366">
+										<ul class="hnav em_hoz_menu effect-menu">
+											<%= render partial: '/shared/menu', locals: { type: 2 } -%>
+										</ul><!-- /.hnav -->
+									</div>
+								</div>
+							</div>
+						</div><!-- /#em-main-megamenu -->
+					</div><!-- /.em-menu-hoz -->
+					<div class="em-logo-sticky f-right">
+						<div class="em-top-icons em-top-icon-my-user-bids  em-top-icon-my-user-bids-sticky">
+    				<% if current_user.present? %>
+    				  <div class="avatar"><%#= image_tag(avatar_url(current_user)) %></div>
+							<div><%= current_user.email -%> | <strong class="left-bids"><%= pluralize(current_user.points, "ponto") -%></strong></div>
+							<span class="clock"><%#= l Time.current, format: :clock -%></span>
+						<% else -%>
+							<div class="clock"><%#= l Time.current, format: :clock -%></div>
+						<% end -%>
+						</div>
+					</div>
+				</div><!-- /.line-top -->
+			</div>
+		</div>
+	</div>
+</div><!-- /.em-header-bottom -->

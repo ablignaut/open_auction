@@ -1,0 +1,371 @@
+$PRIMARY_COLOR: #d35b30;
+$SECONDARY_COLOR: #aa2c03;
+
+body {
+  background-color: $PRIMARY_COLOR;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+.green {
+  color:forestgreen;
+}
+.red {
+  color:crimson;
+}
+
+.wrapper-body {
+  background-color: #ffffff;
+}
+
+.alert.alert-warning, .recaptcha_error {
+  background-color:darkorange;
+  color:#ffffff;
+}
+
+.alert.alert-error {
+  background-color:firebrick;
+  color:#ffffff;
+}
+
+.alert.alert-success {
+  background-color:forestgreen;
+  color:#ffffff;
+}
+
+.alert.alert-info {
+  background-color:dodgerblue;
+  color:#ffffff;
+}
+
+.em-wrapper-header .em-header-style27 .welcome-msg:before, .em-wrapper-header .em-header-style27 .account-link:before, .em-wrapper-header .em-header-style27 .em-top-links > ul li:before, .em-wrapper-header .em-header-style27 .em-top-links ul.links li:before, .em-wrapper-header .em-header-style27 .em-top-links ul.em-links-wishlist li:before, .em-wrapper-header .em-header-style27 .toolbar-switch:before {
+  background-color: $PRIMARY_COLOR;
+}
+.em-wrapper-header .em-header-middle {
+  border-top-color: $PRIMARY_COLOR;
+}
+
+.em-wrapper-header .em-header-style27 .em_nav .hnav .menu-item-depth-0:hover > a.em-menu-link span, .em-wrapper-header .em-header-style27 .em_nav .hnav .menu-item-depth-0 > .em-catalog-navigation > li.level0:hover > a.em-menu-link span {
+  color: $PRIMARY_COLOR;
+  border-color: $PRIMARY_COLOR;
+  border-top-color: $PRIMARY_COLOR;
+}
+
+a.btn, input.btn, a.btn:hover, input.btn:hover, a.btn:focus, input.btn:focus {
+  color: #ffffff;
+}
+
+a.btn-submit, input.btn-submit, a.btn-back:hover, input.btn-back:hover {
+  border-color: $PRIMARY_COLOR;
+  background-color: $PRIMARY_COLOR;
+}
+a.btn-submit:hover, input.btn-submit:hover, .em-top-icons .em-menu-icon:hover {
+  background-color: #ffffff;
+  color: $PRIMARY_COLOR;
+  border-color: $PRIMARY_COLOR;
+}
+
+a.btn-back, input.btn-back {
+  border-color: #f1f1f1;
+  background-color: #f1f1f1;
+}
+
+.em-header-style27 .account-link-new a {
+  color: #434343;
+}
+
+.em-header-style27 .account-link-new:hover a {
+  color: $PRIMARY_COLOR;
+}
+
+.em-top-icons .em-menu-icon {
+  color: #ffffff;
+  border-color: $PRIMARY_COLOR;
+  background-color: $PRIMARY_COLOR;
+}
+
+.em-top-icons.em-top-icon-my-user-bids {
+  color: #ffffff;
+  border-color: $PRIMARY_COLOR;
+  background-color: $PRIMARY_COLOR;
+}
+
+.em-wrapper-header a:hover, .em-wrapper-header a:focus, .em-wrapper-header a:active {
+  color: #ffffff;
+}
+
+#em-mheader .em-mobile-help li a:hover {
+  background-color: $PRIMARY_COLOR;
+  border-color: $PRIMARY_COLOR;
+}
+
+.em-header-style27 .my-user-bids {
+  background-color: $PRIMARY_COLOR;
+  color: #ffffff;
+}
+
+.em-wrapper-header a:focus {
+  color: initial;
+}
+
+.em-wrapper-footer .em-footer-style07 .em-social .em-social-icon {
+  color:#888;
+}
+
+.price-box {
+  color: #434343;
+}
+
+#active-auctions, #small-auctions {
+  .bid-button {
+    color: #ffffff;
+    background-color: $PRIMARY_COLOR;
+  }
+
+  .bid-button:hover {
+    background-color: $SECONDARY_COLOR;
+  }
+
+  .bid-button.ended, .bid-button.ended:hover {
+    background-color: #808080;
+  }
+
+  .price-box {
+    color: crimson;
+  }
+
+  .user-box {
+    color: #434343;
+  }
+
+  .crono span {
+    color:white;
+  }
+
+  .crono.red span {
+    background-color:#DC143C;
+  }
+
+  .inactive .crono span {
+    background-color:#ccc;
+  }
+
+  .crono span {
+    background-color:#3C14DC;
+  }
+
+  .product-item {
+    border-color: $PRIMARY_COLOR;
+  }
+  .inactive .product-item {
+    border-color:#e1e1e1;
+  }
+  .targe {
+    color: $PRIMARY_COLOR;
+  }
+  .messages {
+    color: crimson;
+  }
+}
+
+.category-products .products-list li.item .product-name a:hover {
+  color: $PRIMARY_COLOR;
+}
+
+#ended-auctions .box-winner span {
+  color:$PRIMARY_COLOR;
+}
+
+#ended-auctions .box-winner span.value {
+  color:crimson;
+}
+
+.pagination {
+  a {
+    color: #434343;
+    background-color: #f1f1f1;
+  }
+  a:hover {
+    color: #ffffff;
+    background-color: $PRIMARY_COLOR;
+  }
+  em {
+    color: #ffffff;
+    background-color: $PRIMARY_COLOR;
+  }
+}
+
+#active-auctions.auction-page {
+  .product-view-detail .image-mini img {
+    border-color: $PRIMARY_COLOR;
+  }
+  .last-bids {
+    border-color:$PRIMARY_COLOR;
+    color:$PRIMARY_COLOR;
+  }
+  .last-bids div:nth-child(odd) {
+    background-color:#f5f5f5;
+  }
+  .last-bids div:first-child {
+    background-color:$PRIMARY_COLOR;
+    color:#fff;
+  }
+  .short-description .std.discount span {
+    color:crimson;
+  }
+}
+
+ul.form-list.contact {
+  textarea:focus { border-color:#e1e1e1; }
+}
+
+#account {
+
+  .my_endings {
+    border-color:#e1e1e1;
+    .box-winner .value {
+      color:crimson;
+    }
+    .status div.facebook {
+      background-color: midnightblue;
+      color: white;
+    }
+    .status div.warning {
+      background-color: darkorange;
+      color: white;
+    }
+    .status div.success {
+      background-color: forestgreen;
+      color: white;
+    }
+    .status div.danger {
+      background-color: crimson;
+      color: white;
+    }
+  }
+
+  .my-points {
+    .has-points {
+      div {
+        background-color: $PRIMARY_COLOR;
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+.product-view-detail {
+
+  .product-shop {
+    .status div.facebook {
+      background-color: midnightblue;
+      color: white;
+    }
+    .status div.warning {
+      background-color: darkorange;
+      color: white;
+    }
+    .status div.success {
+      background-color: forestgreen;
+      color: white;
+    }
+    .status div.danger {
+      background-color: crimson;
+      color: white;
+    }
+  }
+
+}
+
+.ending-voucher {
+  b {
+    background-color: $PRIMARY_COLOR;
+    color:#fff;
+  }
+}
+
+.product-shop {
+  .price-box {
+    .offer-price {
+      color: forestgreen;
+    }
+    .offer-price-unique {
+      color: forestgreen;
+    }
+  }
+  .points {
+    div {
+      background-color: $PRIMARY_COLOR;
+      color: #fff;
+    }
+    b {
+      color:$PRIMARY_COLOR;
+    }
+  }
+}
+
+.my-discounts, .my-miles {
+  b {
+    background-color: $PRIMARY_COLOR;
+    color: #fff;
+  }
+}
+
+.tabloide .custom-box {
+  border-color: #e1e1e1;
+}
+
+.tip {
+  background-color: $PRIMARY_COLOR;
+}
+
+.nav-place {
+  color:$PRIMARY_COLOR;
+  a { color:$PRIMARY_COLOR; }
+  .place.active {
+    background-color:$PRIMARY_COLOR;
+    color:#fff;
+  }
+  .place {
+    border-color:$PRIMARY_COLOR;
+  }
+  .list {
+    border-color:$PRIMARY_COLOR;
+    background-color:#fff;
+    div {
+      color:$PRIMARY_COLOR;
+    }
+    div:nth-child(odd) {
+      background-color:#f5f5f5;
+    }
+    div:hover {
+      background-color:$PRIMARY_COLOR;
+      a { color:#fff; }
+    }
+  }
+}
+
+.nav-mlu a {
+  background-color:#fff;
+  border-color:$PRIMARY_COLOR;
+  color:$PRIMARY_COLOR !important;
+}
+.nav-mlu a:hover {
+  background-color:$PRIMARY_COLOR;
+  color:#fff !important;
+}
+.nav-mlu a.active {
+  background-color:$PRIMARY_COLOR;
+  color:#fff !important;
+}
+
+.select-place {
+  background-color:#fff;
+}
+
+.select-place:focus {
+  border-color:#e1e1e1;
+}

@@ -1,0 +1,25 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <%= devise_error_messages! %>
+
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    <%= f.text_field :email, autofocus: true, class: 'form-control', placeholder: 'Endereço de email' %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <div class="control-group">
+    <div class="controls recaptcha">
+      <%= recaptcha_tags(hl: 'pt-BR') if @session and @session.failed_attempts > ATTEMPTS_BEFORE_CAPTCHA %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%= f.submit 'Entrar', class: 'btn btn-success col-xs-12' %>
+    </div>
+  </div>
+<% end %>

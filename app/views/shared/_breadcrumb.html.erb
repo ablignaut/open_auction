@@ -1,0 +1,16 @@
+<div class="wrapper-breadcrums">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-24">
+        <div class="breadcrumbs">
+          <ul>
+            <% nav.each do |n| %>
+              <li><%= link_to n[:title], n[:url] %><span class="separator">/</span></li>
+            <% end %>
+            <li class="cms_page"><strong><%= yield(:title) %></strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

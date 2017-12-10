@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Auction</title>
+
+  <%= stylesheet_link_tag    'admin/application', media: 'all' %>
+
+  <!-- this page specific styles -->
+
+  <!-- google font libraries -->
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+
+  <!-- ================= Favicon ================== -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83203758-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body class="pace-done theme-red" id="login-page-full">
+  <div id="login-full-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 ">
+          <div id="registration-form" >
+            <div class="col-xs-12">
+              <div id="login-box">
+                <div id="login-box-holder">
+                  <div class="row">
+                    <div class="col-xs-12">
+
+                      <header id="login-header">
+                        <div id="login-logo">
+                          <%= image_tag 'logo.png' %>
+                        </div>
+                      </header>
+                      <div id="login-box-inner">
+                        <%= render 'shared/flash_messages' %>
+
+                        <%= yield %>
+
+                        <footer class="credits" >
+                          <small><%= Date.current.year %> &copy; Filipe Mendes</small>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="login-box-footer">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      Não possui conta?
+                      <%= link_to 'Cadastre-se', new_user_registration_path %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= javascript_include_tag 'admin/application' %>
+
+</body>
+</html>
