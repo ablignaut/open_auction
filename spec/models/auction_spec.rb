@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe Auction, type: :model do
   let(:auction) { FactoryBot.build(:auction) }
 
