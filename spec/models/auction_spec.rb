@@ -5,6 +5,16 @@ RSpec.describe Auction, type: :model do
   it { should validate_presence_of(:start_value) }
   it { should validate_presence_of(:current_value) }
   it { should validate_presence_of(:ending_value) }
+  it { should validate_attachment_presence(:image) }
+
+  it { should have_attached_file(:image) }
+  it do
+    should validate_attachment_content_type(:image)
+      .allowing(
+        'image/jpeg', 'image/pjpeg', 'image/jpg', 'image/x-png',
+        'image/png','image/gif'
+      )
+  end
 
   it { should validate_length_of(:description).is_at_most(255) }
 
