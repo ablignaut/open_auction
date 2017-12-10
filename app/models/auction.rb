@@ -20,6 +20,7 @@ class Auction < ApplicationRecord
             :ending_value,
             numericality: { greater_than: 0 },
             allow_blank: true
+  validates :ending, inclusion: { in: [true, false] }
   validate :lower_ending_value
 
   validates_attachment_content_type :image, content_type: %r{\Aimage\/.*\z}

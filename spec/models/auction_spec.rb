@@ -7,6 +7,10 @@ RSpec.describe Auction, type: :model do
   it { should validate_presence_of(:ending_value) }
   it { should validate_attachment_presence(:image) }
 
+  it { should allow_value(true).for(:ending) }
+  it { should allow_value(false).for(:ending) }
+  it { should_not allow_value(nil).for(:ending) }
+
   it { should have_attached_file(:image) }
   it do
     should validate_attachment_content_type(:image)

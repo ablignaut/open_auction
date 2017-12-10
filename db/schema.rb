@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20171210144012) do
     t.decimal "start_value", precision: 10, scale: 2, default: "0.0"
     t.decimal "ending_value", precision: 10, scale: 2, default: "0.0"
     t.decimal "current_value", precision: 10, scale: 2, default: "0.0"
+    t.boolean "ending", default: false
     t.string "image_file_name"
     t.string "image_content_type"
     t.integer "image_file_size"
