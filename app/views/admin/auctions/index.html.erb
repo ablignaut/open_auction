@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="main-box clearfix">
+      <header class="main-box-header clearfix">
+        <h2 class="pull-left">Lotes</h2>
+
+        <div id="reportrange" class="pull-right">
+          <%= link_to 'Novo lote', new_admin_auction_path, class: 'btn btn-primary' %>
+        </div>
+      </header>
+
+      <div class="main-box-body clearfix">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="text-center"><span>id</span></th>
+                <th class="text-center"><span>Nome do produto</span></th>
+                <th class="text-center"><span>Valor Inicial</span></th>
+                <th class="text-center"><span>Valor atual</span></th>
+                <th class="text-center"><span>Encerrado?</span></th>
+                <th class="text-center"><span>Data da criação</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @auctions.each do |auction| %>
+              <tr>
+                <td class="text-center">#<%= auction.id %></td>
+                <td><%= auction.name %></td>
+                <td class="text-right"><%= number_to_currency auction.start_value %></td>
+                <td class="text-right"><%= number_to_currency auction.current_value %></td>
+                <td class="text-center">
+                  <span class="label <%= auction.ending ? 'label-success' : 'label-danger' %>">
+                    <%= auction_status_to_literal(auction.ending) %>
+                  </span>
+                </td>
+                <td class="text-center"><%= l auction.created_at %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <ul class="pagination pull-right">
+          <%= will_paginate @auctions %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

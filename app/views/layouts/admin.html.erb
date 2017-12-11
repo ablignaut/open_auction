@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<%= csrf_meta_tags %>
+
+<title>Open Auction Admin</title>
+
+<%= stylesheet_link_tag    'admin/application', media: 'all' %>
+
+<!-- google font libraries -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-83203758-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</head>
+<body class="pace-done theme-blue" >
+<div id="theme-wrapper">
+  <!-- MENU_TOP -->
+  <%= render partial: 'admin/shared/header' %>
+  <!-- END_MENU_TOP -->
+  <div id="page-wrapper" class="container">
+    <div class="row">
+
+      <!-- MENU_LEFT -->
+      <%= render partial: 'admin/shared/menu_left' %>
+      <!-- END_MENU_LEFT -->
+
+      <!--MAIN_CONTAINER_PART-->
+      <div id="content-wrapper">
+        <div id="fixed-messages">
+          <%= render 'shared/flash_messages' %>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- BREADCRUMB -->
+            <%#= render partial: 'admin/shared/breadcrumb' %>
+            <!-- END_BREACRUMB -->
+
+            <%= yield %>
+          </div>
+        </div>
+        <!-- FOOTER -->
+        <%= render partial: 'admin/shared/footer' %>
+        <!-- END_FOOTER -->
+      </div>
+      <!-- END_MAIN_CONTAINER_PART -->
+    </div>
+  </div>
+</div>
+
+<div class="loading">Loading&#8230;</div>
+
+<%= javascript_include_tag 'admin/application' %>
+
+<%= yield :inline_javascript %>
+
+</body>
+</html>
