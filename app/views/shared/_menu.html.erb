@@ -1,19 +1,9 @@
 <% if type != 2 %>
-	<%#= link_to_menu(type, 'Home', 'fa-home', root_path) -%>
-	<%#= link_to_menu(type, 'Arrematados', 'fa-gavel', endeds_path) -%>
-	<%#= link_to_menu(type, 'Descontos', 'fa-tags', offers_path) -%>
-	<%#= link_to_menu(type, MENU_PAMPLHETS, 'fa-newspaper-o', pamphlets_path) -%>
-	<%#= link_to_menu(type, 'Depoimentos', 'fa-comments-o', testimonials_path) -%>
-	<%#= link_to_menu(type, 'Como funciona', 'fa-gears', howitworks_path) -%>
-	<%#= link_to_menu(type, 'Quem somos', 'fa-users', about_path) -%>
-	<%#= link_to_menu(type, 'Contato', 'fa-envelope', contact_path) -%>
-	<%#= link_to_menu(type, 'Seja Parceiro', 'fa-handshake-o', new_partner_proposal_path) -%>
+	<%= link_to_menu(type, 'Home', 'fa-home', root_path) -%>
 <% else %>
 	<% if current_user.present? %>
-	<li class="menu-item-depth-0"><%#= link_to raw("<span><i class='fa fa-user'></i> Minha conta</span>"), account_root_path, class: 'em-menu-link' -%></li>
-	<li class="menu-item-depth-0"><%#= link_to raw("<span><i class='fa fa-sign-in'></i> Sair</span>"), destroy_user_session_path, method: :delete, class: 'em-menu-link' -%></li>
+	<li class="menu-item-depth-0"><%= link_to raw("<span><i class='fa fa-sign-in'></i> Sair</span>"), destroy_user_session_path, method: :delete, class: 'em-menu-link' -%></li>
 	<% else %>
-	<li class="menu-item-depth-0"><%#= link_to raw("<span><i class='fa fa-user-plus'></i> Entrar</span>"), endpoint_authorization_path, class: 'em-menu-link' -%></li>
+	<li class="menu-item-depth-0"><%= link_to raw("<span><i class='fa fa-user-plus'></i> Entrar</span>"), new_user_session_path, class: 'em-menu-link' -%></li>
 	<% end -%>
-	<li class="menu-item-depth-0"><%#= link_to raw("<span><i class='fa fa-envelope'></i> Contato</span>"), contact_path, class: 'em-menu-link' -%></li>
 <% end -%>
