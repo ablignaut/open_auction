@@ -9,11 +9,15 @@ class Auction < ApplicationRecord
   validates :start_value,
             :current_value,
             :ending_value,
+            :name,
             :description,
             presence: true
   validates :image, attachment_presence: true
   validates :description,
             length: { maximum: 255 },
+            allow_blank: true
+  validates :name,
+            length: { maximum: 40 },
             allow_blank: true
   validates :start_value,
             :current_value,
