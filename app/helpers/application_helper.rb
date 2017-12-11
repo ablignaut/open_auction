@@ -16,4 +16,8 @@ module ApplicationHelper
       notice: 'info-circle'
     }[flash_type.to_sym] || 'question-sign'
   end
+
+  def auction_status_to_literal(auction_ending)
+    auction_ending ? 'SIM' : 'Não'
+  end
 end
