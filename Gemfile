@@ -87,6 +87,7 @@ end
 group :development do
   # Debugger
   gem 'better_errors', '~> 2.3'
+  gem 'binding_of_caller', '~> 0.7.3'
 
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
