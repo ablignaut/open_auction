@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20171210144012) do
   end
 
   create_table "auctions", force: :cascade do |t|
+    t.string "name", limit: 40, null: false
     t.string "description", limit: 255, null: false
     t.decimal "start_value", precision: 10, scale: 2, default: "0.0"
     t.decimal "ending_value", precision: 10, scale: 2, default: "0.0"
