@@ -18,3 +18,6 @@ $docker-compose up
 ```
 
 PS.: Comando só deverá ser excutado se o docker estiver funcioando corretamente
+
+### Application hosted on:
+https://open-auction.herokuapp.com/
