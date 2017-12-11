@@ -1,16 +1,887 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require template
- *= require colors
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require template
+*= require colors
+*= require_self
+*/
+
+*:focus {
+  outline: none !important;
+}
+
+.alert {
+  border: none;
+}
+
+.flash-messages {
+  position: fixed;
+  top: 0;
+  width: 99%;
+  z-index: 2000;
+  margin: 10px 0.5%;
+}
+
+#loading { position:fixed; right:5px; top:8px; z-index:10000; background-color:#fff; }
+#loading img { width:30px; }
+
+.data-table th {
+  text-align:center;
+}
+
+.em-header-style27 .em-logo .logo {
+  margin: 10px 0;
+}
+
+.em-wrapper-header .em-fixed-top.navbar-fixed-top .em-logo-sticky {
+  width: initial;
+  padding: 15px 0;
+}
+.em-account .block-content {
+  width:270px;
+}
+
+.em-wrapper-header .em-header-middle {
+  border-top: 3px solid;
+}
+
+.em-top-links {
+  margin-top: 25px;
+}
+
+.em-wrapper-header .em-header-style27 .em_nav .hnav .menu-item-depth-0:hover > a.em-menu-link span, .em-wrapper-header .em-header-style27 .em_nav .hnav .menu-item-depth-0 > .em-catalog-navigation > li.level0:hover > a.em-menu-link span {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.em-header-style27 .link-account:before, .em-header-style27 .em-register-link:before {
+  display:none;
+}
+
+a.btn, input.btn {
+  font: 700 12px/1.35 Lato, Helvetica, Arial, sans-serif;
+  border: 1px solid;
+  margin: 0 10px 10px 0;
+  padding: 7px 10px;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  float:left;
+  text-transform: uppercase;
+}
+
+.form-list li.control input.radio, .form-list li.control input.checkbox {
+  margin-top: 5px;
+}
+
+li.captcha-set {
+  margin:20px 0;
+}
+
+.em-header-style27 .account-link-new {
+  padding: 14px 0 15px;
+  margin-left: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: initial;
+  margin-bottom: -20px;
+}
+
+.em-header-style27 .my-user-bids {
+  padding: 5px 0 9px 0;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+
+.em-header-style27 .my-user-bids .avatar, .em-header-style27 .em-top-icon-my-user-bids .avatar {
+  float:left;
+  padding-left:15px;
+}
+
+.em-header-style27 .my-user-bids .avatar img {
+  width: 44px;
+  height: 44px;
+  border-radius: 21px;
+}
+
+.em-header-style27 .em-top-icon-my-user-bids .avatar img {
+  width: 41px !important;
+  height: 41px !important;
+  border-radius: 20px;
+}
+
+.em-account {
+  top:40px;
+}
+
+.em-wrapper-header .em-mheader-menu-top {
+  height:52px;
+  zoom:0.7;
+}
+
+.em-top-icons {
+  position: absolute;
+  top: 10px;
+  width: 32px;
+  height: 32px;
+  font-size:19px;
+}
+
+.em-top-icons.em-top-icon-signup, .em-top-icons.em-top-icon-signout {
+  right: 50px;
+}
+
+.em-top-icons.em-top-icon-signin, .em-top-icons.em-top-icon-account {
+  right: 90px;
+}
+
+.em-top-icons.em-top-icon-my-user-bids {
+  right: 130px;
+  width:180px;
+  padding:6px 0 0 0;
+  font-size:12px;
+  border-style: solid;
+  border-width: 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+}
+
+
+.em-top-icons.em-top-icon-my-user-bids.em-top-icon-my-user-bids-sticky {
+  right:20px;
+  top:6px;
+  width:260px;
+  padding:4px 0 0 0;
+  font-size:14px;
+  height:50px;
+}
+
+.em-fixed-top .clock {
+  padding-top: 10px;
+}
+
+.em-top-icons .em-menu-icon {
+  border-style: solid;
+  border-width: 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  width:32px;
+  height:32px;
+  text-align:center;
+}
+
+#em-mheader-menu-icon {
+  font-size: 19px;
+  padding: 6px 0 0 7px;
+}
+
+.em-top-icons.em-top-icon-signin .em-menu-icon {
+
+}
+
+.em-top-icons.em-top-icon-signout .em-menu-icon {
+  padding: 0 0 0 2px;
+}
+
+.em-top-icons.em-top-icon-signup .em-menu-icon {
+  padding: 1px 0 0 3px;
+  font-size: 18px;
+}
+
+.em-top-icons.em-top-icon-account .em-menu-icon {
+  padding: 1px 0 0 1px;
+  font-size: 18px;
+}
+
+#em-mheader-menu-icon {
+  height:32px;
+  width:32px;
+}
+
+.em_nav .hnav .menu-item-depth-0 > a.arrow:before {
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.em_nav .hnav .menu-item-depth-0 > a.em-menu-link i.fa {
+  font-size: 1.5em;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .em-header-style27 .em_nav ul.hnav {
+    zoom:0.8;
+  }
+  .em-header-style27 .my-user-bids {
+    font-size:12px;
+    zoom:0.8;
+  }
+  .em_nav .hnav .menu-item-depth-0 > a.em-menu-link {
+    min-height:75px;
+  }
+  .em-wrapper-header .em-fixed-top.navbar-fixed-top .em_nav .hnav .menu-item-depth-0 > a.em-menu-link span {
+    padding-top:30px;
+  }
+  .em-top-icons.em-top-icon-my-user-bids.em-top-icon-my-user-bids-sticky {
+    zoom:0.8;
+    margin-top:6px;
+  }
+}
+
+.navbar-fixed-top .em_nav .hnav .menu-item-depth-0 > a.em-menu-link i.fa {
+  font-size:16px;
+}
+
+.em-wrapper-header .em-fixed-top.navbar-fixed-top .em_nav {
+  padding:0;
+}
+
+.em-wrapper-header .em-fixed-top.navbar-fixed-top .em-logo-sticky {
+  position:initial;
+}
+
+.form-list label {
+  text-transform:initial;
+}
+
+.em-footer-address {
+  text-align:center;
+  font-size:12px;
+}
+
+a.product-img {
+  position: relative;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.products-grid a.product-img img {
+  width: 100%;
+  height: auto;
+}
+
+#active-auctions, #small-auctions {
+  margin-bottom: 20px;
+  .product-name { height: 54px; margin: 0 0.5rem 1rem 0.5rem; }
+  .owl-wrapper { width: initial !important; padding-top:5px; }
+  .owl-item { margin-bottom:30px; }
+  .price-box {
+    font-weight: 700;
+    margin-bottom:0;
+    display: inline-block;
+    padding: 5px 5px;
+    line-height: 16px;
+    font-size:22px;
+  }
+  .bid-button {
+    display:block;
+    padding: 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 20px 10px 20px;
+    text-transform:uppercase;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .crono span {
+    display:inline-block;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-weight:bold;
+    font-size:40px;
+    min-width: 45px;
+  }
+  .col { width:50%; }
+  .col.left { float:left; }
+  .col.right { float:right; margin-top: 8px; }
+  .product-item .row { margin:0 0 10px 0; }
+  @media (max-width: 1199px) and (min-width: 768px), (max-width: 600px) and (min-width: 480px) {
+    .product-item .row {
+      zoom:0.8;
+    }
+  }
+  .messages {
+    margin-bottom: 0;
+    font-size: 12px;
+    height: 21px;
+    margin-top: 4px;
+  }
+  .item .product-item {
+    box-shadow: none;
+  }
+  .targe {
+    height: 30px;
+    clear:left;
+  }
+  .targe span {
+    font-weight: bold;
+    display: block;
+  }
+  .targe span.delayed {
+    font-size:20px;
+  }
+  .targe img {
+    width:initial;
+    max-width: 200px;
+    max-height:20px;
+  }
+  .loading {
+    height:62px;
+    margin-bottom:10px;
+    padding-top: 10px;
+  }
+}
+
+#small-auctions {
+  .targe {
+    height:15px;
+    font-size:12px;
+  }
+}
+
+#ended-auctions {
+  .box-winner {
+    text-align:right;
+  }
+  .box-date {
+    margin-top:1.55rem;
+    text-align:right;
+    font-size:12px;
+  }
+  .desc {
+    margin-bottom:0;
+  }
+  .search input[type="text"]{
+    width:100%;
+    margin-bottom:10px;
+  }
+  .search input[type="text"]:focus{
+    border-color:#E1E1E1;
+  }
+  .search input[type="submit"]{
+    float:initial;
+    padding: 11px 20px;
+    width:100%;
+    margin-bottom:10px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #ended-auctions .box-winner, #ended-auctions .box-date {
+    text-align: left;
+  }
+  #ended-auctions .desc { display:none; }
+}
+
+.pagination {
+  display:block;
+  text-align:center;
+  margin-top:0;
+  a, em, span {
+    font-style:initial;
+    padding: 5px 11px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+}
+
+#active-auctions.auction-page .product-shop {
+  text-align:left;
+}
+
+#active-auctions.auction-page  {
+  .product-view-detail .image-mini img {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .product-view-detail .image-mini {
+    float: left;
+    margin-right: 10px;
+  }
+  .last-bids {
+    border:1px solid;
+    margin: 0 10% 40px 10%;
+    border-radius: 5px;
+    text-align:left;
+  }
+  .last-bids div:first-child {
+    margin-bottom:0;
+    padding:10px 10px;
+    border-radius: 3px 3px 0 0;
+    font: 500 14px/1.35 Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  .last-bids div {
+    padding:3px 10px;
+  }
+  .last-bids span {
+    float:right;
+  }
+  .last-bids div:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+  .product-view-detail .row {
+    margin: 0 0 40px 0;
+  }
+  .product-name {
+    color: #434343;
+    font: 500 14px/1.35 Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  .short-description .std.discount {
+    font-size:20px;
+  }
+  .short-description .std.discount span {
+    font-size:16px;
+    display:block;
+  }
+}
+
+.form-list, div#testimonial {
+  margin-top:15px;
+  margin-bottom:20px;
+}
+
+#small-auctions {
+  .product-name {
+    height: 34px;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+  }
+  .product-name a {
+    font-size:12px;
+  }
+  .targe {
+    font-size:10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+    top:35%;
+  }
+  .targe img {
+    width:100px;
+  }
+  .targe div {
+    padding:5px 0;
+  }
+  .f-fix {
+    zoom:0.8;
+    margin-top:25px;
+  }
+  a.product-img {
+    margin-bottom:0;
+  }
+  .bid-button {
+    margin: 0 10px;
+  }
+}
+
+ul.form-list.contact {
+  textarea { width:100%; }
+  label { padding-top:0; }
+}
+
+.em-wrapper-brands .row {
+  height: 113px;
+  overflow: hidden;
+}
+
+.em-wrapper-ads-11 .em-ads-item .em-ads-img img{
+  width: 80px;
+  height:80px;
+}
+
+#account {
+
+  .my_endings {
+    border:1px solid;
+    margin-bottom:10px;
+    padding:10px;
+    .image {
+      text-align:center;
+      img {
+        width:100%;
+      }
+    }
+    .product-name a {
+      font-weight: 700;
+    }
+    .box-date {
+      font-size:12px;
+    }
+    .status {
+      margin: 30px 0;
+      text-align:center;
+    }
+    .status div {
+      display: inline;
+      padding: 10px 20px;
+      border-radius: 3px;
+    }
+    .status div i {
+      margin-right:10px;
+    }
+    .status span {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    .status .btn-facebook {
+      float:initial;
+      margin: 0 0 -10px 0;
+    }
+  }
+
+  .my-points {
+    td.details span {
+      display: block;
+      font-size: 10px;
+    }
+    .has-points {
+      text-align:center;
+      div {
+        display:inline-block;
+        padding: 30px 20px;
+        border-radius: 10px;
+        span {
+          font-size:20px;
+          font-weight:bold;
+        }
+      }
+      .rescue-mile, .rescue-bid, .create_voucher {
+        display:block;
+        select {
+          display: block;
+          margin: 0 0 10px 0;
+          height: 30px;
+          font-size: 12px;
+          width: 100px;
+          color:#000;
+          width:130px;
+        }
+        input {
+          margin:0;
+          width:100%;
+          display:block;
+        }
+        input.voucher {
+          height: 30px;
+          margin-bottom: 10px;
+          border: 1px solid #e1e1e1;
+          line-height: 14px;
+          background-color: #fff;
+          color: #000;
+          text-transform: uppercase;
+          text-align:center;
+          font-weight: bold;
+        }
+        select:focus {
+          background-color:#fff;
+        }
+        i {
+          clear:both;
+          font-size:10px;
+          display:block;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  .em-logo .logo img {
+    width:initial;
+  }
+  #small-auctions {
+    display:none !important;
+
+  }
+  #active-auctions.auction-page .last-bids div {
+    padding: 0px 10px;
+  }
+}
+
+
+.product-view-detail .product-img-box .more-views img {
+  width:100px;
+  margin:2px;
+  cursor:pointer;
+}
+
+.product-view-detail .product-shop, .product-shop {
+  .price-box {
+    margin-bottom:0;
+    font-size:16px;
+    .price {
+      font-size: 14px;
+    }
+    .offer-price {
+      font-weight: bold;
+      color: forestgreen;
+      font-size: 24px;
+    }
+    .offer-price-unique {
+      font-size: 26px;
+    }
+  }
+  .points {
+    min-height:30px;
+    div {
+      border-radius: 3px;
+      padding: 3px;
+    }
+  }
+  .points.unique {
+    min-height:0px;
+    margin:0;
+    div {
+      float:left;
+      padding: 3px 10px;
+    }
+    span {
+      display:block;
+      clear:left;
+      padding-top:10px;
+    }
+    a {
+      margin:20px 0 40px 0;
+    }
+    div.not-logged {
+      margin:20px 0;
+      background-color:darkorange;
+      text-align:center;
+    }
+    b {
+      margin-top:10px;
+      display:block;
+    }
+  }
+}
+
+.products-grid .product-item:hover {
+  box-shadow: none;
+}
+
+.emcatalog-disable-hover-below-mobile.products-grid li.item .product-item:hover {
+  position:initial !important;
+}
+
+.em-line-01 .video-center {
+  text-align: center;
+}
+
+.img-circle {
+  border-radius: 50% !important;
+}
+
+.testimonial-margin {
+  margin-bottom: 10px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ending-voucher {
+  text-align: center;
+  font-size: 30px;
+  b {
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+  span {
+    font-size: 12px;
+    display:block;
+  }
+}
+
+.my-discounts, .my-miles {
+  b {
+    font-weight:bold;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+}
+
+.tabloide .custom-pamphlet {
+  height: 375px !important;
+}
+
+.tabloide .custom-box {
+  text-align: center;
+  border: 1px solid;
+  padding:10px;
+  border-radius: 5px;
+  margin-bottom:20px;
+  img {
+    border-radius:0;
+    display:initial;
+  }
+}
+
+.lb-image {
+  width: initial !important;
+  height: initial !important;
+}
+
+.category-products .products-grid .item .product-name {
+  white-space: initial;
+  height: 36px;
+}
+
+li.item .offer-points-targe {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  top: -5px;
+  left: 6px;
+}
+
+.privacy {
+  ul {
+    list-style:initial;
+  }
+  li {
+    margin-left:30px;
+  }
+}
+
+.product-item {
+  img.auction-favorite {
+    position: absolute;
+    width: 8% !important;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+  }
+}
+
+.my-data {
+  .notifications {
+    i.info { clear:both; display:block; margin-bottom:20px; }
+    span { position: relative; top: -3px; }
+  }
+}
+
+.howitworks, .terms {
+  ol {
+    list-style: initial;
+    li {
+      margin-left:20px !important;
+    }
+  }
+  ol.decimal {
+    list-style: decimal;
+    li {
+      margin-left:20px !important;
+      padding-left: 5px;
+    }
+    ol.latin {
+      list-style: lower-latin;
+      li {
+        margin-left:40px !important;
+      }
+    }
+  }
+}
+
+li.menu-item-depth-0 {
+  zoom: 0.8;
+}
+
+.hnav.em_hoz_menu {
+  margin-top:10px;
+}
+
+.product-view-detail {
+  .product-shop {
+    .status {
+      div i {
+        margin-right:10px;
+      }
+    }
+    .status div {
+      margin-top:5px;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.info-show-auction-partner {
+  img { width:100%; }
+}
+
+.use-ul-ol {
+  ul, ol {
+    li { list-style:initial; margin-left:20px; }
+  }
+}
+
+.tip {
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  min-height: 41px;
+  margin-top:20px;
+}
+
+.tip-show {
+  margin-top:0px;
+}
+
+.btn.change-registration {
+  float: right;
+  margin: 5px 0 0 0;
+  font-size: 10px;
+  padding:5px 10px;
+}

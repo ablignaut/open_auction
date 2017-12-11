@@ -20,4 +20,10 @@ module ApplicationHelper
   def auction_status_to_literal(auction_ending)
     auction_ending ? 'SIM' : 'Não'
   end
+
+  def link_to_menu(type, title, icon, url)
+    raw("<li class='menu-item-depth-0'>#{link_to url, class: 'em-menu-link' do
+     type == 0 ? raw("<span class=\"fa #{icon}\"></span> #{title}") : raw("<span><i class=\"fa fa-2x #{icon}\"></i><br />#{title}</span>")
+     end}</li>")
+  end
 end

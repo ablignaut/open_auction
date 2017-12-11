@@ -14,3 +14,4 @@
  *= require jquery.mask.min
  *= require jquery.fastclick.min
  *= require_self
+*/

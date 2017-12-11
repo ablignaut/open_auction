@@ -1,0 +1,3 @@
+<% if @bid.errors.present? %>
+$('#fixed-messages').html('<%= escape_javascript(render '/shared/flash_messages') -%>')
+<% end %>

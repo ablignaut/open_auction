@@ -9,3 +9,8 @@ pt-BR:
         ending_value: 'Valor de arremate'
         ending: 'Arrematado'
         image: 'Imagem'
+  activemodel:
+      attributes:
+        bid_form:
+          auction: 'Leilão'
+          user: 'Usuário'
