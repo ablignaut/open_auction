@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    attributes:
+      auction:
+        name: 'Nome do produto'
+        description: 'Descrição do produto'
+        start_value: 'Valor Inicial'
+        current_value: 'Valor Atual'
+        ending_value: 'Valor de arremate'
+        ending: 'Arrematado'
+        image: 'Imagem'
