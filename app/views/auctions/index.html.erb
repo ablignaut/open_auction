@@ -1,4 +1,4 @@
-<% content_for :title, "Leilões" -%>
+<% content_for :title, "Auctions" -%>
 
 <div class="em-wrapper-main">
   <div class="container container-main">
@@ -7,7 +7,7 @@
         <div class="row">
           <div class="em-line-01 em-col-main col-sm-24">
             <div class="widget-title">
-              <h1><span>Leilões</span></h1>
+              <h1><span>Auctions</span></h1>
             </div>
             <div class="category-products">
               <% if @auctions.blank? %>
@@ -27,14 +27,14 @@
                         <div class="f-fix">
                           <h2 class="product-name text-center  "><%= link_to auction.name, auction_path(auction.id) %></h2>
                           <div class="text-center price-box regular-price">
-                            valor Atual <span class="price" id="auction-value"><%= number_to_currency auction.current_value %></span>
+                            Current Value <span class="price" id="auction-value"><%= number_to_currency auction.current_value %></span>
                           </div>
                           <div class="text-center price-box regular-price">
-                            Status <span class="price" id="auction-status"><%= auction.ending ? 'Arrematado' : 'Disponível' %></span>
+                            Status <span class="price" id="auction-status"><%= auction.ending ? 'Closed' : 'Available' %></span>
                           </div>
                           <%= link_to bid_path(auction.id), remote: true do %>
                           <div class="points">
-                            <div>Cobrir Lance</div>
+                            <div>Bid</div>
                           </div>
                           <% end %>
                         </div>

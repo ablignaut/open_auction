@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def auction_status_to_literal(auction_ending)
-    auction_ending ? 'SIM' : 'Não'
+    auction_ending ? 'Yes' : 'No'
   end
 
   def link_to_menu(type, title, icon, url)

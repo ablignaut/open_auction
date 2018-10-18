@@ -2,8 +2,8 @@
 	<%= link_to_menu(type, 'Home', 'fa-home', root_path) -%>
 <% else %>
 	<% if current_user.present? %>
-	<li class="menu-item-depth-0"><%= link_to raw("<span><i class='fa fa-sign-in'></i> Sair</span>"), destroy_user_session_path, method: :delete, class: 'em-menu-link' -%></li>
+	<li class="menu-item-depth-0"><%= link_to raw("<span><i class='fa fa-sign-in'></i> Logout</span>"), destroy_user_session_path, method: :delete, class: 'em-menu-link' -%></li>
 	<% else %>
-	<li class="menu-item-depth-0"><%= link_to raw("<span><i class='fa fa-user-plus'></i> Entrar</span>"), new_user_session_path, class: 'em-menu-link' -%></li>
+	<li class="menu-item-depth-0"><%= link_to raw("<span><i class='fa fa-user-plus'></i> Login</span>"), new_user_session_path, class: 'em-menu-link' -%></li>
 	<% end -%>
 <% end -%>

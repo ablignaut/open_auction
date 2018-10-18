@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    attributes:
+      auction:
+        name: 'Product name'
+        description: 'Product description'
+        start_value: 'Initial Value'
+        current_value: 'Current Value'
+        ending_value: 'End value'
+        ending: 'Ending'
+        image: 'Image'
+  activemodel:
+      attributes:
+        bid_form:
+          auction: 'Auction'
+          user: 'User'

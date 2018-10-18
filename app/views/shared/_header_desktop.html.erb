@@ -19,7 +19,7 @@
 					<% if current_user.present? %>
 					<ul class="list-inline f-right">
 						<div class="list-inline f-right account-link-new">
-							<%= link_to destroy_user_session_path, method: :delete, class: 'em-register-link' do %><i class="fa fa-sign-out"></i> Sair<% end -%>
+							<%= link_to destroy_user_session_path, method: :delete, class: 'em-register-link' do %><i class="fa fa-sign-out"></i> Logout<% end -%>
 						</div>
 					</ul>
 					<% else %>
@@ -94,3 +94,4 @@
 		</div>
 	</div>
 </div><!-- /.em-header-bottom -->
+</div>
